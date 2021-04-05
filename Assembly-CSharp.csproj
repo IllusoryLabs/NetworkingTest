@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\ParrelSync-master\ParrelSync-master\Examples\CustomArgumentExample.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll" />
@@ -297,17 +298,17 @@
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.2.3f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
-    <Reference Include="Mono.CecilX">
-      <HintPath>Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll</HintPath>
-    </Reference>
     <Reference Include="Mono.CecilX.Rocks">
       <HintPath>Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.Rocks.dll</HintPath>
     </Reference>
-    <Reference Include="Mono.CecilX.Mdb">
-      <HintPath>Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.Mdb.dll</HintPath>
-    </Reference>
     <Reference Include="Mono.CecilX.Pdb">
       <HintPath>Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.CecilX">
+      <HintPath>Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.CecilX.Mdb">
+      <HintPath>Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.Mdb.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.2.3f1\Editor\Data\PlaybackEngines\AppleTVSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -692,41 +693,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Mirror.csproj">
+      <Project>{9F375D48-629B-FBCF-3C72-6708DFA4F446}</Project>
+      <Name>Mirror</Name>
+    </ProjectReference>
     <ProjectReference Include="kcp2k.csproj">
       <Project>{70821683-18E3-2D90-37E7-685368C210E1}</Project>
       <Name>kcp2k</Name>
-    </ProjectReference>
-    <ProjectReference Include="Mirror.Weaver.csproj">
-      <Project>{8B84932C-7C8B-6E29-46C4-6977E9E19315}</Project>
-      <Name>Mirror.Weaver</Name>
     </ProjectReference>
     <ProjectReference Include="Mirror.Editor.csproj">
       <Project>{3E669C34-CC20-6E3C-CC4C-59DE2C9A2D54}</Project>
       <Name>Mirror.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Telepathy.csproj">
-      <Project>{949476FF-8559-34B8-978D-B2E6918A7898}</Project>
-      <Name>Telepathy</Name>
-    </ProjectReference>
-    <ProjectReference Include="Mirror.Cloud.csproj">
-      <Project>{DB65A819-6138-6849-C84E-A01A3384752B}</Project>
-      <Name>Mirror.Cloud</Name>
-    </ProjectReference>
-    <ProjectReference Include="Mirror.Examples.Cloud.GUI.csproj">
-      <Project>{1C6F1805-1E17-1B72-9FD8-20B860C552C5}</Project>
-      <Name>Mirror.Examples.Cloud.GUI</Name>
-    </ProjectReference>
-    <ProjectReference Include="Mirror.Components.csproj">
-      <Project>{04185150-C12B-A790-64B7-4D0F88EED273}</Project>
-      <Name>Mirror.Components</Name>
-    </ProjectReference>
     <ProjectReference Include="Mirror.Examples.csproj">
       <Project>{0808825E-FB1A-FC3A-B205-1806246B7077}</Project>
       <Name>Mirror.Examples</Name>
-    </ProjectReference>
-    <ProjectReference Include="Mirror.Examples.Cloud.Pong.csproj">
-      <Project>{089C9C0C-8050-DC80-E6B9-6447B838BF2B}</Project>
-      <Name>Mirror.Examples.Cloud.Pong</Name>
     </ProjectReference>
     <ProjectReference Include="Mirror.CompilerSymbols.csproj">
       <Project>{BD4522A4-099B-7AF6-DFCB-C6D8F3AF976E}</Project>
@@ -736,13 +717,33 @@
       <Project>{859F3EB7-9AC5-F2F2-EE53-181A2868D75B}</Project>
       <Name>Mirror.Authenticators</Name>
     </ProjectReference>
-    <ProjectReference Include="Mirror.csproj">
-      <Project>{9F375D48-629B-FBCF-3C72-6708DFA4F446}</Project>
-      <Name>Mirror</Name>
+    <ProjectReference Include="Telepathy.csproj">
+      <Project>{949476FF-8559-34B8-978D-B2E6918A7898}</Project>
+      <Name>Telepathy</Name>
+    </ProjectReference>
+    <ProjectReference Include="Mirror.Examples.Cloud.GUI.csproj">
+      <Project>{1C6F1805-1E17-1B72-9FD8-20B860C552C5}</Project>
+      <Name>Mirror.Examples.Cloud.GUI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Mirror.Cloud.csproj">
+      <Project>{DB65A819-6138-6849-C84E-A01A3384752B}</Project>
+      <Name>Mirror.Cloud</Name>
     </ProjectReference>
     <ProjectReference Include="SimpleWebTransport.csproj">
       <Project>{EA5E21FA-B2DF-0011-847D-4128E89710DD}</Project>
       <Name>SimpleWebTransport</Name>
+    </ProjectReference>
+    <ProjectReference Include="Mirror.Weaver.csproj">
+      <Project>{8B84932C-7C8B-6E29-46C4-6977E9E19315}</Project>
+      <Name>Mirror.Weaver</Name>
+    </ProjectReference>
+    <ProjectReference Include="Mirror.Components.csproj">
+      <Project>{04185150-C12B-A790-64B7-4D0F88EED273}</Project>
+      <Name>Mirror.Components</Name>
+    </ProjectReference>
+    <ProjectReference Include="Mirror.Examples.Cloud.Pong.csproj">
+      <Project>{089C9C0C-8050-DC80-E6B9-6447B838BF2B}</Project>
+      <Name>Mirror.Examples.Cloud.Pong</Name>
     </ProjectReference>
     <ProjectReference Include="ParrelSync.csproj">
       <Project>{96D30E8C-FC98-ECD2-5B91-55AC603420DE}</Project>
